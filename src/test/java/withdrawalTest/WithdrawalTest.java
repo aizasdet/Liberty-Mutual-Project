@@ -12,7 +12,7 @@ public class WithdrawalTest {
     @Test
     void withdrawalSuccesful() {
         final BankAccount account = new BankAccount(19);
-        assertThrows(withdrawalSuccesful.class, () -> account.withdraw(15),
+        assertThrows(WithdrawalSuccesful.class, () -> account.withdraw(15),
                 "Withdrawal succesul");
 
     }
