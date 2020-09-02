@@ -1,10 +1,11 @@
-public class PostMethodTest {
+public class PostMethodTestCase {
 
-        RestAssured.baseURI ="https://reqres.in/api/users";
+
+        RestAssured.baseURI ="https://reqres.in/api/users.";
         RequestSpecification request = RestAssured.given();
 
         JSONObject requestParams = new JSONObject();
-        requestParams.post("name", "darth vader");
+        requestParams.post("name", "darth vader"); // Cast
         requestParams.post("job", "villain");
 
 
@@ -16,6 +17,4 @@ public class PostMethodTest {
         Assert.assertEquals(statusCode, "201");
         String successCode = response.jsonPath().get("SuccessCode");
         Assert.assertEquals( "Correct Success code was returned", successCode, "OPERATION_SUCCESS");
-        }
-
-}
+    }

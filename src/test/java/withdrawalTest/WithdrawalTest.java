@@ -2,6 +2,7 @@ package withdrawalTest;
 
 public class WithdrawalTest {
 
+    //This is a negative scenario where the withdrawal is more than the initial balance
     @Test
     void notEnoughFunds() {
         BankAccount account = new BankAccount(9);
@@ -9,11 +10,12 @@ public class WithdrawalTest {
                 "Balance must be greater than amount of withdrawal");
     }
 
+    // This is a happy path scenario where the withdrawal is successful
     @Test
-    void withdrawalSuccesful() {
+    void withdrawalSuccessful() {
         final BankAccount account = new BankAccount(19);
         assertThrows(WithdrawalSuccesful.class, () -> account.withdraw(15),
-                "Withdrawal succesul");
+                "Withdrawal successful");
 
     }
 }

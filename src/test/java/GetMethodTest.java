@@ -1,4 +1,4 @@
-@Test
+@Test @GetMapping
 public void test_NumberOfTotalPagesShouldBe2() {
 
         given().
@@ -11,7 +11,7 @@ public void test_NumberOfTotalPagesShouldBe2() {
 
 
 
-@Test
+@Test @GetMapping
 public void test_LastName_ShouldBeMorris() {
 
         String originalText = "test";
