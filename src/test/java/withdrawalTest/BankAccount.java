@@ -2,17 +2,17 @@ package withdrawalTest;
 
 public class BankAccount {
 
-    private Integer balance;
+    private Integer m_balance;
 
     BankAccount(Integer initialBalance) {
-        balance = initialBalance;
+        m_balance = initialBalance;
     }
 
     public Integer withdraw(Integer amount) {
-        if (balance < amount) {
-            throw new NotEnoughFundsException(amount, balance);
+        if (m_balance < amount) {
+            throw new NotEnoughFundException(amount, m_balance);
         }
-        balance -= amount;
-        return balance;
+        m_balance -= amount;
+        return m_balance;
     }
 }

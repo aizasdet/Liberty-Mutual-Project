@@ -1,9 +1,10 @@
+import java.util.List;
 
 public class Customer {
 
     String name;
 
-List <Item> listOfItems;
+List<Item> listOfItems;
 
 
 
@@ -28,7 +29,7 @@ public String getName() {
 
         }
 
-         public void setName(String name) {
+public  void setName(String name) {
 
         this.name = name;
 

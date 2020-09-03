@@ -1,11 +1,17 @@
-public class PostMethodTestCase {
+import com.google.gson.JsonObject;
+import io.restassured.RestAssured;
+import io.restassured.response.Response;
+import io.restassured.specification.RequestSpecification;
 
+public class PostMethodTestCase<statusCode> {
 
-        RestAssured.baseURI ="https://reqres.in/api/users.";
+       String baseURI =  "https://reqres.in/api/users.";
         RequestSpecification request = RestAssured.given();
 
-        JSONObject requestParams = new JSONObject();
-        requestParams.post("name", "darth vader"); // Cast
+       JsonObject requestParams = new JsonObject();
+
+
+        requestParams.post("name", "darth vader");
         requestParams.post("job", "villain");
 
 
@@ -16,5 +22,10 @@ public class PostMethodTestCase {
         int statusCode = response.getStatusCode();
         Assert.assertEquals(statusCode, "201");
         String successCode = response.jsonPath().get("SuccessCode");
-        Assert.assertEquals( "Correct Success code was returned", successCode, "OPERATION_SUCCESS");
+        Assert.assertEquals( "Correct Success code was returned",  "OPERATION_SUCCESS");
     }
+
+
+    //different data  (negative scenario
+                    // make it executable
+

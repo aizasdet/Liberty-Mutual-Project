@@ -4,10 +4,9 @@ import static org.mockito.Mockito.when;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.arpit.java2blog.mockito.Customer;
-import org.arpit.java2blog.mockito.Item;
-import org.aspectj.lang.annotation.Before;
+
 import org.junit.Assert;
+
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,9 +17,8 @@ import org.mockito.runners.MockitoJUnitRunner;
 public class CustomerBillTest {
     Customer c1;
 
-    @Before
-
-    public void setup(){
+     @Before
+     public void setup(){
         c1=new Customer();
         c1.setName("John");
         List<Item> listOfItems=new ArrayList<Item>();
